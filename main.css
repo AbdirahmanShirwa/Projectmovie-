@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Arial;
+}
+body {
+    background-color: #202020;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.header__logo h1 {
+    font-size: 50px;
+    color: tomato;
+    padding: 0;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+}
+.header__logo p {
+    margin-top: -40px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    padding: 0;
+    font-family: Arial;
+}
+.header__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+}
+.header__search span {
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin-right: -5px;
+    border-radius: 4px;
+    line-height: 40px;
+    text-transform: uppercase;
+    background-color: tomato;
+}
+main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.movie__search {
+    height: 40px;
+    padding: 4px;
+    border-radius: 4px;
+    width: 300px;
+    font-size: 16px;
+    border: none;
+    color: rgb(41, 38, 38);
+    background-color: #fff;
+}
+.movie__search:focus {
+    outline: none;
+}
+.about__movie {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+.about__movie__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(36, 22, 53, 0.8);
+    max-width: 600px;
+    position: relative;
+    top: 200;
+    margin: 0 auto;
+    color: #fff;
+}
+.about__movie__card button {
+    height: 20px;
+    width: 20px;
+    float: right;
+    background-color: rgba(185, 15, 15, 0.8);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.box {
+    margin: 20px;
+    background-color: #3d3c3c;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+    -webkit-box-shadow: 0px 0px 15px 0px #000000; 
+    box-shadow: 0px 0px 15px 0px #000000;
+    align-self: start;
+}
+.box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.box p {
+    overflow-wrap: break-word;
+    position: absolute;
+    padding: 5px 0;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(36, 22, 53, 0.8);
+    color: #fff;
+    width: 100%;
+}
+.box__description {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    color: #fff;
+    text-align: center;
+    font-family: Arial;
+    font-size: 14px;
+}
+.box__description p {
+    height: auto;
+    z-index: 100;
+}
+.box__readMore {
+    width: 100%;
+    padding: 7px 0;
+    background-color: #1482e9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 0 4px 4px;
+}
+.about__movie_desc {
+    padding: 10px;
+}
+.about {
+    background-color: tomato;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#Poster {
+    width: 150px;
+}
+@media only screen and (max-width: 400px) {
+    .about__movie__card {
+      flex-direction: column;
+    }
+    #Poster {
+        margin: 0 auto;
+    }
+    #close {
+        position: absolute;
+        right: 0;
+    }
+    .about__movie_desc {
+        text-align: center;
+    }
+    .header__search {
+        width: 100%;
+    }
+}
