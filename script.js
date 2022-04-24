@@ -1,3 +1,4 @@
+// Here we modify the Main Arrays
 const inputField = document.querySelector('.movie__search');
 const boxes = document.querySelector('main');
 let aboutUs = document.querySelector('.about__movie');
@@ -10,7 +11,7 @@ inputField.addEventListener('keyup', (e) => {
     }
     e.preventDefault();
 });
-
+//  If the Search value is found it will show the movielist. Otherwise it will alert message
 const loadMovies = (searchMovie) => {
     fetch(`https://www.omdbapi.com/?s=${searchMovie}&apikey=19ec95fc`)
     .then(response => 
@@ -37,8 +38,8 @@ const showMovies = (movies) => {
             const movieBox = document.createElement('div');
             movieBox.classList.add('box');
             boxes.appendChild(movieBox);
-
-            let imgPoster = Poster === 'N/A' ? 'images/na.jpeg' : Poster;
+            
+            let imgPoster = Poster === 'N/A' ? 'images/na.jpeg' : Poster;// Here it will show movie poster of the movies
             movieBox.innerHTML = `
             <img src="${imgPoster}" width="100%"/ alt="${Title}" onClick="movieSelected('${imdbID}')">
                 <p>${Title} (${Year})</p>
@@ -46,6 +47,7 @@ const showMovies = (movies) => {
         });
     }
 }
+// If the user clicks the movies it show a container with detailed information about the movie
 const movieSelected = (imdbID) => {
     fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=19ec95fc`)
     .then(response => 
@@ -79,6 +81,7 @@ const movieSelected = (imdbID) => {
             console.log(err);
         })
     }
+    // User can close the container of the detailed information
 const closeWindow = () => {
         aboutUs.style.display = 'none';
         const card = document.querySelector('.card');
