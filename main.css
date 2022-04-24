@@ -21,7 +21,7 @@ header {
 }
 .header__logo h1 {
     font-size: 50px;
-    color: tomato;
+    color: rgb(0, 0, 0);
     padding: 0;
     text-align: center;
     font-family: 'Amatic SC', cursive;
